@@ -11,6 +11,9 @@ class RockScaladServlet extends RockScaladStack {
     		<h1>Welcome to Rock Scalad!</h1>
         <h3>Keep your friends close and your rocks closer</h3>
         <p>Please don't <a href="no-way-jose">click random things</a>.</p>
+        <p>Halt! <a href="/halt">Who goes there?</a>.</p>
+        <p>Are you <a href="/awesome/you">awesome?</a>.</p>
+        <p>This is definitely<a href="broken">broken</a>.</p>
       </body>
     </html>
   }
