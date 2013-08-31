@@ -17,7 +17,7 @@ class RockScaladServlet extends RockScaladStack {
 
   get("/awesome/:user") {
   	// If they don't include awesomeness, they're clearly not awesome
-  	val awesomeness:Int = params.getOrElse("awesomeness","0").toInt
+  	val awesomeness:Int = params.getOrElse("awesomeness", "0").toInt
 
   	// If they don't send a user, they'll find themselves in no man's land (404)
   	val user:String = params("user")
@@ -27,6 +27,17 @@ class RockScaladServlet extends RockScaladStack {
   			<p>Hello {user}, your awesomeness is looking to be about {awesomeness}</p>
   		</body>
 		</html>
+  }
+
+  get("/halt") {
+  	// If you don't pass in the secret param, you'll get an invalid request response (400)
+  	val secret:String = params.getOrElse(
+  		"whoGoesThere", 
+  		halt(
+  			400,
+  			<h1>Aha! You tried to be sneaky. Mediocre attempt</h1>)
+  		)
+  	<h1>Ahoy, Matey!</h1>
   }
 
   notFound {
