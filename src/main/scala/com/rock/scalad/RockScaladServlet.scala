@@ -9,7 +9,7 @@ class RockScaladServlet extends RockScaladStack {
     <html>
 		  <body>
     		<h1>Welcome to Rock Scalad!</h1>
-        <h3>Nothing you wouldn't show your own mother so far, but this is only the beginning.</h3>
+        <h3>Keep your friends close and your rocks closer</h3>
         <p>Please don't <a href="no-way-jose">click random things</a>.</p>
       </body>
     </html>
