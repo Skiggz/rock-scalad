@@ -40,6 +40,11 @@ class RockScaladServlet extends RockScaladStack {
   	<h1>Ahoy, Matey!</h1>
   }
 
+  get("/broken") {
+  	val broken:Int = "".toInt
+  	<h1>This shouldn't show up</h1>
+  }
+
   notFound {
   	<html>
   		<body>
@@ -47,6 +52,17 @@ class RockScaladServlet extends RockScaladStack {
   			<p>The page you request was not found. <a href="/">Go home surfer, you're drunk</a></p>
   		</body>
   	</html>
+  }
+
+  error {
+  	case e => {
+	  	<html>
+	  		<body>
+	  			<h1>Uh oh, something is hardcore borked</h1>
+	  			<p>Just pretend you didn't see anything OK. <a href="/">Continue</a></p>
+	  		</body>
+	  	</html>
+  	}
   }
   
 }
